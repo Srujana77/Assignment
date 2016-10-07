@@ -1,0 +1,12 @@
+git clone https://github.com/echtra/devops_test
+cd devops_test
+mkdir build
+cd build
+cmake ..
+make
+scp -r user@your.server.example.com:EXECUTABLE_FILE PATH_IN_SERVER
+cd ..
+cd external
+scp -r user@your.server.example.com:'hiredis @ 5f98e1d' PATH_IN_SERVER_FOR_REDIS
+scp -r user@your.server.example.com:~/Script_deploy.sh /user/home
+ssh user@your.server.example.com "~/Script_deploy.sh"
